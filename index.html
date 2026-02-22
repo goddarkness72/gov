@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Policy Website</title>
+
+  <!-- CSS is written inside style tag -->
+  <style>
+    /* This is CSS - it makes the page look nice */
+
+    /* Body = the whole page */
+    body {
+      background-color: #f0f4f8;
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      color: #222222;
+    }
+
+    
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 16px;
+      margin: 5px 0 0 0;
+    }
+/* Header = top bar */
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Navigation bar = menu links */
+    nav {
+      background-color: #0055a5;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .nav-right {
+      float: right;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .user-info {
+      color: white;
+      font-size: 14px;
+    }
+
+    .logout-btn {
+      background: #ff6b6b;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .logout-btn:hover {
+      background: #ff5252;
+    }
+
+    /* Main content area */
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Section boxes */
+    .section-box {
+      background-color: white;
+      border: 2px solid #0055a5;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .section-box h2 {
+      color: #003366;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 8px;
+    }
+
+    .section-box p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* Policy cards */
+    .policy-card {
+      background-color: #e8f0fe;
+      border-left: 5px solid #003366;
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 4px;
+    }
+
+    .policy-card h3 {
+      margin: 0 0 8px 0;
+      color: #003366;
+    }
+
+    .policy-card p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* Search bar */
+    #search-box {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #0055a5;
+      border-radius: 4px;
+    }
+
+    #search-btn {
+      padding: 10px 18px;
+      font-size: 16px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #search-btn:hover {
+      background-color: #0055a5;
+    }
+
+    #search-result {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    /* Highlight box */
+    .highlight {
+      background-color: #fff9cc;
+      border: 1px solid #ffcc00;
+      border-radius: 6px;
+      padding: 14px;
+      margin: 15px 0;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER - Top of the page -->
+  <header>
+    <h1>🏛️ National Government Portal</h1>
+    <p>Official Website for Government Policies &amp; Public Services</p>
+  </header>
+
+  <!-- NAVIGATION - Menu bar -->
+  <nav>
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="policy.html">Policies</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <span class="user-info">👤 <span id="userDisplay">User</span></span>
+        <a href="#" onclick="logoutUser()" class="logout-btn">🚪 Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HOME SECTION -->
+    <div id="home" class="section-box">
+      <h2>Welcome to the Government Policy Portal</h2>
+      <p>
+        This website helps citizens learn about important government policies.
+        You can find information about education, health, environment, and more.
+        Our goal is to make government information easy to understand for everyone.
+      </p>
+      <div class="highlight">
+        📢 <strong>Notice:</strong> New Education Policy 2025 has been announced. Click on Education below to read more.
+      </div>
+    </div>
+
+    <!-- SEARCH SECTION -->
+    <div class="section-box">
+      <h2>🔍 Search Policies</h2>
+      <p>Type a keyword below to search for a policy:</p>
+      <input type="text" id="search-box" placeholder="Example: education, health, water..." />
+      <button id="search-btn" onclick="searchPolicy()">Search</button>
+      <div id="search-result"></div>
+    </div>
+
+    <!-- POLICIES SECTION -->
+    <div id="policies" class="section-box">
+      <h2>📋 Key Government Policies</h2>
+
+      <div class="policy-card">
+        <h3>📚 National Education Policy (NEP 2025)</h3>
+        <p>Free education for all children from age 6 to 18. New curriculum includes digital learning, science, and arts education for every student.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>🏥 Universal Health Coverage</h3>
+        <p>Every citizen gets free basic healthcare at government hospitals. Free medicines are provided for common diseases to all families below poverty line.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>🌱 Clean Environment Policy</h3>
+        <p>Ban on single-use plastics. Every city must have 30% green areas. Industries must reduce carbon emissions by 40% by year 2030.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>🏠 Housing for All</h3>
+        <p>Government will build affordable homes for low-income families. Every homeless family will receive housing support by 2026.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>💧 Clean Water Policy</h3>
+        <p>Safe drinking water will be provided to every village and city. Water pipelines will be installed in all rural areas by 2027.</p>
+      </div>
+
+    </div>
+
+    <!-- EDUCATION SECTION -->
+    <div id="education" class="section-box">
+      <h2>📚 Education Policies</h2>
+      <p>The government believes every child deserves a good education. Here are some important education rules:</p>
+      <ul style="font-size:16px; line-height:2;">
+        <li>Free school books for students up to Grade 10</li>
+        <li>Mid-day meal program in all government schools</li>
+        <li>Scholarships for top 10% students in each district</li>
+        <li>New computer labs in all government schools</li>
+        <li>Free coaching for entrance exams for poor students</li>
+      </ul>
+    </div>
+
+    <!-- HEALTH SECTION -->
+    <div id="health" class="section-box">
+      <h2>🏥 Health Policies</h2>
+      <p>The government works hard to keep all citizens healthy. Key health programs include:</p>
+      <ul style="font-size:16px; line-height:2;">
+        <li>Free vaccination for all children under age 5</li>
+        <li>Free check-ups at government hospitals every 6 months</li>
+        <li>Mental health support hotline: <strong>1800-XXX-XXXX</strong></li>
+        <li>Free ambulance service for emergency cases</li>
+        <li>Nutrition program for pregnant women and newborns</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- FOOTER - Bottom of the page -->
+  <footer>
+    <p>🏛️ National Government Portal — Official Website</p>
+    <p>© 2025 Government of India. All Rights Reserved.</p>
+    <p>Designed for citizens | Transparent | Accessible | Helpful</p>
+  </footer>
+
+  <!-- JAVASCRIPT - This makes the search button work -->
+  <script src="auth/auth.js"></script>
+  <script>
+    // Check if user is logged in when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      checkLoginStatus();
+      
+      // Display current user's name
+      const user = getCurrentUser();
+      if (user) {
+        document.getElementById('userDisplay').textContent = user.firstName || user.username;
+      }
+    });
+
+    // This is a JavaScript function
+    // A function is a block of code that runs when called
+
+    function searchPolicy() {
+
+      // Get what the user typed in the search box
+      var userInput = document.getElementById("search-box").value;
+
+      // Convert to lowercase so search works easily
+      var keyword = userInput.toLowerCase();
+
+      // This variable will store our answer message
+      var result = "";
+
+      // Check what the user typed and show matching policy
+      if (keyword == "") {
+        result = "⚠️ Please type a keyword to search.";
+
+      } else if (keyword.includes("education") || keyword.includes("school")) {
+        result = "✅ Found! — National Education Policy: Free education for all children age 6-18. Includes free books, meals, and scholarships.";
+
+      } else if (keyword.includes("health") || keyword.includes("hospital") || keyword.includes("medicine")) {
+        result = "✅ Found! — Universal Health Coverage: Free basic healthcare and medicines for all citizens at government hospitals.";
+
+      } else if (keyword.includes("water") || keyword.includes("drinking")) {
+        result = "✅ Found! — Clean Water Policy: Safe drinking water will be provided to every village and city by 2027.";
+
+      } else if (keyword.includes("environment") || keyword.includes("plastic") || keyword.includes("green")) {
+        result = "✅ Found! — Clean Environment Policy: Ban on plastic, 30% green areas in cities, and reduced carbon emissions by 2030.";
+
+      } else if (keyword.includes("house") || keyword.includes("housing") || keyword.includes("home")) {
+        result = "✅ Found! — Housing for All: Affordable homes for low-income families. Every homeless family gets support by 2026.";
+
+      } else {
+        result = "❌ No policy found for \"" + userInput + "\". Try: education, health, water, environment, or housing.";
+      }
+
+      // Show the result on the page
+      document.getElementById("search-result").innerHTML = result;
+    }
+  </script>
+
+</body>
+</html>

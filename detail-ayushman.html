@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayushman Bharat PM-JAY - Full Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a237e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0055a5;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .nav-right {
+            float: right;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .user-info {
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Ensure user display is visible on dark/nav backgrounds */
+        #userDisplay, .nav-right .user-info {
+            color: white !important;
+        }
+
+        .logout-btn {
+            background: #ff6b6b;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #ff5252;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1a237e;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a237e;
+            margin-top: 30px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 4px solid #1a237e;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 10px;
+            margin: 10px 0;
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .btn-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1a237e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3949ab;
+        }
+
+        .btn-back {
+            background: #666;
+        }
+
+        .btn-back:hover {
+            background: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a237e;
+            color: white;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #1a237e;
+            color: white;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <script src="auth/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+            const user = getCurrentUser();
+            if (user) {
+                document.getElementById('userDisplay').textContent = user.firstName || user.username;
+            }
+        });
+    </script>
+
+    <header>
+        <h1>🏥 Ayushman Bharat (PM-JAY)</h1>
+        <p>Pradhan Mantri Jan Arogya Yojana - Health Insurance Scheme</p>
+    </header>
+
+    <nav>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="policy.html">Back to Policies</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-right">
+                <span class="user-info">👤 <span id="userDisplay">User</span></span>
+                <a href="#" onclick="logoutUser()" class="logout-btn">🚪 Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Overview</h2>
+        <p>Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY) is the world's largest government-funded health insurance scheme. It aims to provide health insurance coverage to poor and vulnerable households, promoting healthy lives and well-being for all.</p>
+
+        <div class="info-box">
+            <strong>Coverage Amount:</strong> ₹5 lakh per family per year for secondary and tertiary care hospitalization
+        </div>
+
+        <h2>Key Features</h2>
+        <ul class="benefits-list">
+            <li><strong>Free Hospitalization:</strong> Up to ₹5 lakh per family per year at empaneled hospitals</li>
+            <li><strong>No Age Limit:</strong> Coverage applicable to entire family including children and elderly</li>
+            <li><strong>Pre-existing Diseases:</strong> Covered from day one without any waiting period</li>
+            <li><strong>Cashless Treatment:</strong> Complete cashless treatment at empaneled health facilities</li>
+            <li><strong>Transportation Allowance:</strong> ₹50 per day for patient and ₹100 for attendant</li>
+            <li><strong>Free Ayurvedic Treatment:</strong> Coverage includes Ayurvedic hospitals in some states</li>
+        </ul>
+
+        <h2>Coverage Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Coverage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Annual Limit per Family</td>
+                    <td>₹5,00,000</td>
+                </tr>
+                <tr>
+                    <td>Eligibility</td>
+                    <td>Below Poverty Line (BPL) & Scheduled Caste/Tribe families</td>
+                </tr>
+                <tr>
+                    <td>Hospitalization Days</td>
+                    <td>Unlimited across empaneled hospitals</td>
+                </tr>
+                <tr>
+                    <td>Pre-existing Disease Waiting Period</td>
+                    <td>None - Covered from Day 1</td>
+                </tr>
+                <tr>
+                    <td>Co-payment</td>
+                    <td>No co-payment from beneficiary</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Services Covered</h2>
+        <ul class="benefits-list">
+            <li>Hepatology (Liver diseases)</li>
+            <li>Cardiovascular surgery</li>
+            <li>Orthopedic surgery</li>
+            <li>Neurosurgery</li>
+            <li>Nephrology (Kidney treatment)</li>
+            <li>Urological procedures</li>
+            <li>Gastroenterology procedures</li>
+            <li>Oncology (Cancer treatment)</li>
+            <li>Other secondary and tertiary surgical procedures</li>
+        </ul>
+
+        <h2>Eligibility Criteria</h2>
+        <div class="info-box">
+            <p><strong>Automatic Eligibility:</strong></p>
+            <ul>
+                <li>Below Poverty Line (BPL) families as per SECC 2011</li>
+                <li>Scheduled Caste and Scheduled Tribe households</li>
+                <li>Selected families from landless labor households</li>
+            </ul>
+        </div>
+
+        <h2>How to Use the Scheme</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Process</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Visit empaneled hospital with identity proof</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hospital verifies your eligibility in PMJAY portal</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>You receive treatment at zero cost</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hospital gets reimbursed directly by government</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Empaneled Hospitals</h2>
+        <p>The scheme covers treatment at over 24,000+ empaneled hospitals across India including public and private facilities.</p>
+
+        <h2>Impact & Statistics</h2>
+        <div class="info-box">
+            <ul>
+                <li>Coverage: Over 50 crore (500 million) beneficiaries</li>
+                <li>Saved thousands of crores in out-of-pocket medical expenses</li>
+                <li>Free treatment for critical surgeries and procedures</li>
+                <li>Reduced financial burden on poor families</li>
+            </ul>
+        </div>
+
+        <h2>Important Links</h2>
+        <div class="btn-group">
+            <a href="https://pmjay.gov.in/" target="_blank" class="btn">🌐 Official Website</a>
+            <a href="https://pmjay.gov.in/empanelled-hospitals" target="_blank" class="btn">🏥 Find Hospitals</a>
+            <a href="https://pmjay.gov.in/know-your-status" target="_blank" class="btn">✓ Check Eligibility</a>
+            <a href="policy.html" class="btn btn-back">⬅️ Back to Policies</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 India Government Policies Project | Ayushman Bharat PM-JAY Detail Page</p>
+    </footer>
+
+</body>
+</html>

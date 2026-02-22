@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Jan Dhan Yojana - Full Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a237e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0055a5;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .nav-right {
+            float: right;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .user-info {
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Ensure user display is visible on dark/nav backgrounds */
+        #userDisplay, .nav-right .user-info {
+            color: white !important;
+        }
+
+        .logout-btn {
+            background: #ff6b6b;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #ff5252;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1a237e;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a237e;
+            margin-top: 30px;
+        }
+
+        /* Ensure policy titles are readable */
+        .container h2 {
+            background: white;
+            color: #1a237e;
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 4px solid #1a237e;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 10px;
+            margin: 10px 0;
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .btn-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1a237e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3949ab;
+        }
+
+        .btn-back {
+            background: #666;
+        }
+
+        .btn-back:hover {
+            background: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a237e;
+            color: white;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #1a237e;
+            color: white;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <script src="auth/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+            const user = getCurrentUser();
+            if (user) {
+                document.getElementById('userDisplay').textContent = user.firstName || user.username;
+            }
+        });
+    </script>
+
+    <header>
+        <h1>💳 Pradhan Mantri Jan Dhan Yojana</h1>
+        <p>National Mission for Financial Inclusion</p>
+    </header>
+
+    <nav>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="policy.html">Back to Policies</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-right">
+                <span class="user-info">👤 <span id="userDisplay">User</span></span>
+                <a href="#" onclick="logoutUser()" class="logout-btn">🚪 Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Overview</h2>
+        <p>Pradhan Mantri Jan Dhan Yojana (PMJDY) is a national mission for financial inclusion to ensure access to financial services, namely banking, credit, insurance and pension. Launched by Prime Minister on August 28, 2014, this scheme aims to provide bank accounts to all households to promote financial inclusion.</p>
+
+        <div class="info-box">
+            <strong>Objective:</strong> To bring every household in India into the formal financial system by providing access to basic banking services.
+        </div>
+
+        <h2>Key Features</h2>
+        <ul class="benefits-list">
+            <li><strong>Zero Balance Account:</strong> Open a bank account with zero minimum balance requirement</li>
+            <li><strong>Free Debit Card:</strong> Get a RuPay debit card free of cost</li>
+            <li><strong>Overdraft Facility:</strong> Access overdraft facility up to ₹5,000 for eligible account holders</li>
+            <li><strong>Life Insurance:</strong> Death benefit of ₹30,000 per account holder</li>
+            <li><strong>Accident Insurance:</strong> Accident claim amount of ₹1,00,000</li>
+            <li><strong>Digital Payment:</strong> Promote digital cash-less transactions</li>
+        </ul>
+
+        <h2>Benefits</h2>
+        <ul class="benefits-list">
+            <li>Universal access to banking services</li>
+            <li>Direct benefit transfer to poor households</li>
+            <li>Financial security through insurance coverage</li>
+            <li>Pension schemes availability</li>
+            <li>Promotes digital financial inclusion</li>
+            <li>Entrepreneurship opportunities through credit access</li>
+        </ul>
+
+        <h2>Eligibility</h2>
+        <div class="info-box">
+            <p><strong>Who can open account:</strong></p>
+            <ul>
+                <li>Any individual (aged 18+) with valid KYC documents</li>
+                <li>For children: Parent or guardian can open account</li>
+                <li>No income criteria or educational qualification required</li>
+            </ul>
+        </div>
+
+        <h2>How to Open Account</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Process</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Visit your nearest bank branch</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fill PMJDY account opening form</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Submit KYC documents (Aadhar, PAN, Voter ID, etc.)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Complete biometric verification</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Get account created and receive debit card</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Financial Inclusion Impact</h2>
+        <div class="info-box">
+            <p>Since launch in August 2014, PMJDY has:</p>
+            <ul>
+                <li>Opened over 46+ crore (460 million) bank accounts</li>
+                <li>Provided debit cards to eligible account holders</li>
+                <li>Disbursed benefits directly to beneficiaries</li>
+                <li>Integrated with Direct Benefit Transfer schemes</li>
+                <li>Promoted financial literacy and digital payments</li>
+            </ul>
+        </div>
+
+        <h2>Related Schemes</h2>
+        <p>PMJDY works in conjunction with:</p>
+        <ul>
+            <li><strong>Direct Benefit Transfer (DBT):</strong> Transfer subsidies and benefits directly to accounts</li>
+            <li><strong>Atal Pension Yojana (APY):</strong> Provides pension for unorganized workers</li>
+            <li><strong>Pradhan Mantri Risk Protection Yojana:</strong> Insurance schemes</li>
+        </ul>
+
+        <h2>Important Links</h2>
+        <div class="btn-group">
+            <a href="https://pmjdy.gov.in/" target="_blank" class="btn">🌐 Official Website</a>
+            <a href="https://pmjdy.gov.in/content/faqs" target="_blank" class="btn">❓ FAQs</a>
+            <a href="https://pmjdy.gov.in/content/guidelines" target="_blank" class="btn">📋 Guidelines</a>
+            <a href="policy.html" class="btn btn-back">⬅️ Back to Policies</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 India Government Policies Project | Pradhan Mantri Jan Dhan Yojana Detail Page</p>
+    </footer>
+
+</body>
+</html>

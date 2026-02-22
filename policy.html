@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government Policies India</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f9;
+    }
+
+    header {
+        background: #1a237e;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .search-box {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .search-box input {
+        width: 60%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    h2 {
+        color: #1a237e;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: white;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+        margin: 0;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background: #1a237e;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .btn:hover {
+        background: #3949ab;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #1a237e;
+        color: white;
+        margin-top: 30px;
+    }
+
+ header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 16px;
+      margin: 5px 0 0 0;
+    }
+/* Header = top bar */
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Navigation bar = menu links */
+    nav {
+      background-color: #0055a5;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .nav-right {
+      float: right;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .user-info {
+      color: white;
+      font-size: 14px;
+    }
+
+    .logout-btn {
+      background: #ff6b6b;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .logout-btn:hover {
+      background: #ff5252;
+    }
+
+    /* Popular Policies Section */
+    .popular-policies {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .popular-policies h2 {
+      color: white;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .popular-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .popular-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #333;
+    }
+
+    .popular-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .popular-card h3 {
+      margin: 0 0 10px 0;
+      color: #667eea;
+    }
+
+    .popular-card p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      overflow: auto;
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 700px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .close-btn {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .modal h2 {
+      color: #1a237e;
+      margin-top: 0;
+    }
+
+    .modal-links {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .modal-links a {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #1a237e;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .modal-links a:hover {
+      background: #3949ab;
+    }
+
+</style>
+
+</head>
+<body>
+
+  <!-- HEADER - Top of the page -->
+  <header>
+    <h1>🏛️ National Government Portal</h1>
+    <p>Official Website for Government Policies &amp; Public Services</p>
+  </header>
+
+  <!-- NAVIGATION - Menu bar -->
+  <nav>
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="policy.html">Policies</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-right">
+        <span class="user-info">👤 <span id="userDisplay">User</span></span>
+        <a href="#" onclick="logoutUser()" class="logout-btn">🚪 Logout</a>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+
+    <!-- POPULAR POLICIES SECTION -->
+    <div class="popular-policies">
+        <h2>⭐ Popular Policies</h2>
+        <div class="popular-grid">
+            <div class="popular-card" onclick="openModal('pmjdy')">
+                <h3>💳 Pradhan Mantri Jan Dhan Yojana</h3>
+                <p>Financial inclusion through universal bank accounts</p>
+            </div>
+            <div class="popular-card" onclick="openModal('ayushman')">
+                <h3>🏥 Ayushman Bharat (PM-JAY)</h3>
+                <p>Free health insurance up to ₹5 lakh per family</p>
+            </div>
+            <div class="popular-card" onclick="openModal('mgnrega')">
+                <h3>💼 MGNREGA</h3>
+                <p>100 days of guaranteed wage employment</p>
+            </div>
+            <div class="popular-card" onclick="openModal('pmay')">
+                <h3>🏠 Pradhan Mantri Awas Yojana</h3>
+                <p>Affordable housing for all Indians</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Financial Inclusion -->
+    <h2>💰 Financial Inclusion</h2>
+
+    <div class="card">
+        <h3>Pradhan Mantri Jan Dhan Yojana (PMJDY)</h3>
+        <p>Provides bank accounts for all households to promote financial inclusion.</p>
+        <a href="https://pmjdy.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>Direct Benefit Transfer (DBT)</h3>
+        <p>Transfers government subsidies directly to bank accounts.</p>
+        <a href="https://dbtbharat.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>Atal Pension Yojana (APY)</h3>
+        <p>Provides pension benefits for unorganized sector workers.</p>
+        <a href="https://www.npscra.nsdl.co.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+
+    <!-- Employment -->
+    <h2>💼 Employment & Skill</h2>
+
+    <div class="card">
+        <h3>MGNREGA</h3>
+        <p>Guarantees 100 days of wage employment in rural areas.</p>
+        <a href="https://nrega.nic.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>Skill India Mission</h3>
+        <p>Provides skill training to youth for employment.</p>
+        <a href="https://www.skillindia.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>Startup India</h3>
+        <p>Supports startups with funding and tax benefits.</p>
+        <a href="https://www.startupindia.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+
+    <!-- Health -->
+    <h2>🏥 Health & Welfare</h2>
+
+    <div class="card">
+        <h3>Ayushman Bharat (PM-JAY)</h3>
+        <p>Provides free health insurance up to ₹5 lakh per family.</p>
+        <a href="https://pmjay.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>Pradhan Mantri Ujjwala Yojana</h3>
+        <p>Provides free LPG connections to poor households.</p>
+        <a href="https://www.pmuy.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>Swachh Bharat Abhiyan</h3>
+        <p>Nationwide cleanliness and sanitation campaign.</p>
+        <a href="https://swachhbharatmission.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+
+    <!-- Housing & Infrastructure -->
+    <h2>🏠 Housing & Development</h2>
+
+    <div class="card">
+        <h3>Pradhan Mantri Awas Yojana (PMAY)</h3>
+        <p>Provides affordable housing for all.</p>
+        <a href="https://pmaymis.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+    <div class="card">
+        <h3>PM Gati Shakti</h3>
+        <p>Infrastructure development initiative for faster connectivity.</p>
+        <a href="https://gati.gov.in/" target="_blank" class="btn">Official Site</a>
+    </div>
+
+
+    <!-- Add More -->
+    <!-- Copy this block to add new policy -->
+    <!--
+    <div class="card">
+        <h3>Scheme Name</h3>
+        <p>Description</p>
+        <a href="#" class="btn">Official Site</a>
+    </div>
+    -->
+
+</div>
+
+<footer>
+    <p>© 2026 India Government Policies Project</p>
+</footer>
+
+<!-- Policy Details Modal -->
+<div id="policyModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-links">
+            <a id="detailLink" href="#" target="_blank">📄 Full Details</a>
+            <a id="officialLink" href="#" target="_blank">🔗 Official Website</a>
+        </div>
+    </div>
+</div>
+
+<script src="auth/auth.js"></script>
+<script>
+// Check if user is logged in when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  checkLoginStatus();
+  
+  // Display current user's name
+  const user = getCurrentUser();
+  if (user) {
+    document.getElementById('userDisplay').textContent = user.firstName || user.username;
+  }
+});
+
+// Policy data
+const policies = {
+    pmjdy: {
+        title: "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        description: "The Pradhan Mantri Jan Dhan Yojana is a national mission for financial inclusion to ensure access to financial services, namely banking, credit, insurance and pension. This scheme provides bank accounts for all households to promote financial inclusion and direct benefit transfer.",
+        official: "https://pmjdy.gov.in/",
+        detail: "detail-pmjdy.html"
+    },
+    ayushman: {
+        title: "Ayushman Bharat (PM-JAY)",
+        description: "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana is the world's largest government-funded health insurance scheme. It provides free health insurance up to ₹5 lakh per family per year for poor and vulnerable families. The scheme covers secondary and tertiary care hospitalization.",
+        official: "https://pmjay.gov.in/",
+        detail: "detail-ayushman.html"
+    },
+    mgnrega: {
+        title: "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA)",
+        description: "MGNREGA is a social security and public works scheme in India that aims to provide livelihood security to households in rural areas by guaranteeing 100 days of wage employment in a financial year. It promotes social inclusion through building infrastructure and natural resource management.",
+        official: "https://nrega.nic.in/",
+        detail: "detail-mgnrega.html"
+    },
+    pmay: {
+        title: "Pradhan Mantri Awas Yojana (PMAY)",
+        description: "Pradhan Mantri Awas Yojana is a housing scheme launched by the Government of India to provide affordable housing for all. The scheme aims to address the housing shortage in urban and rural areas by providing credit-linked subsidy and beneficiary-led construction.",
+        official: "https://pmaymis.gov.in/",
+        detail: "detail-pmay.html"
+    }
+};
+
+function openModal(policyId) {
+    const policy = policies[policyId];
+    if (policy) {
+        document.getElementById("modalTitle").textContent = policy.title;
+        document.getElementById("modalDescription").textContent = policy.description;
+        document.getElementById("detailLink").href = policy.detail;
+        document.getElementById("officialLink").href = policy.official;
+        document.getElementById("policyModal").style.display = "block";
+    }
+}
+
+function closeModal() {
+    document.getElementById("policyModal").style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("policyModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

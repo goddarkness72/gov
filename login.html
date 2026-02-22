@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Government Policy Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🏛️ National Government Portal</h1>
+    <p>Official Website for Government Policies &amp; Public Services</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../policy.html">Policies</a>
+    <a href="login.html">Login</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+      ✅ Welcome! Your account was created successfully. You can now login.
+    </div>
+
+    <!-- LOGIN FORM -->
+    <div class="form-box">
+      <h2>🔐 User Login</h2>
+
+      <form id="loginForm" onsubmit="handleLogin(event)">
+
+        <!-- Username field -->
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required
+          />
+          <div class="error-message" id="usernameError"></div>
+        </div>
+
+        <!-- Password field -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <div class="error-message" id="passwordError"></div>
+        </div>
+
+        <!-- Remember me checkbox -->
+        <div class="form-group">
+          <input type="checkbox" id="rememberMe" name="rememberMe" />
+          <label for="rememberMe" class="checkbox-label">
+            Remember me
+          </label>
+        </div>
+
+        <!-- Login button -->
+        <button type="submit" class="btn-submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Signup link -->
+    <div class="link-box">
+      <p>
+        Don't have an account?
+        <a href="signup.html">Sign Up Here</a>
+      </p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>🏛️ National Government Portal — Official Website</p>
+    <p>© 2025 Government of India. All Rights Reserved.</p>
+    <p>Designed for citizens | Transparent | Accessible | Helpful</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="auth.js"></script>
+
+</body>
+</html>

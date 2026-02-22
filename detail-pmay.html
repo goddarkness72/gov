@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Awas Yojana - Full Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a237e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #0055a5;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .nav-right {
+            float: right;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .user-info {
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Ensure user display is visible on dark/nav backgrounds */
+        #userDisplay, .nav-right .user-info {
+            color: white !important;
+        }
+
+        .logout-btn {
+            background: #ff6b6b;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #ff5252;
+        }
+
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1a237e;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1a237e;
+            margin-top: 30px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 20px;
+            border-left: 4px solid #1a237e;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 10px;
+            margin: 10px 0;
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .btn-group {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1a237e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3949ab;
+        }
+
+        .btn-back {
+            background: #666;
+        }
+
+        .btn-back:hover {
+            background: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a237e;
+            color: white;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background: #1a237e;
+            color: white;
+        }
+
+        table tr:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <script src="auth/auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            checkLoginStatus();
+            const user = getCurrentUser();
+            if (user) {
+                document.getElementById('userDisplay').textContent = user.firstName || user.username;
+            }
+        });
+    </script>
+
+    <header>
+        <h1>🏠 Pradhan Mantri Awas Yojana</h1>
+        <p>Housing for All - Affordable Housing Scheme</p>
+    </header>
+
+    <nav>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="policy.html">Back to Policies</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-right">
+                <span class="user-info">👤 <span id="userDisplay">User</span></span>
+                <a href="#" onclick="logoutUser()" class="logout-btn">🚪 Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Overview</h2>
+        <p>Pradhan Mantri Awas Yojana (PM Awas Yojana) is a housing scheme launched to provide affordable housing for all citizens of India. The scheme aims to address the housing shortage in both urban and rural areas by providing credit-linked subsidy, direct assistance, and beneficiary-led construction.</p>
+
+        <div class="info-box">
+            <strong>Objective:</strong> To provide a pucca (permanent) house with basic amenities to all households by 2024
+        </div>
+
+        <h2>Key Features</h2>
+        <ul class="benefits-list">
+            <li><strong>Credit-Linked Subsidy:</strong> Direct subsidy on home loans up to ₹2.67 lakh</li>
+            <li><strong>Low Interest Rates:</strong> Reduced rate of interest on home loans</li>
+            <li><strong>Easy Loan Processing:</strong> Faster approval and disbursement</li>
+            <li><strong>Minimal Documentation:</strong> Simplified application process</li>
+            <li><strong>Urban & Rural Coverage:</strong> Available in both cities and villages</li>
+            <li><strong>Flexible Repayment:</strong> Extended repayment period</li>
+        </ul>
+
+        <h2>Scheme Components</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Credit-Linked Subsidy Scheme (CLSS)</td>
+                    <td>Subsidy on home loans for LIG/EWS families</td>
+                </tr>
+                <tr>
+                    <td>Affordable Housing in Partnership (AHP)</td>
+                    <td>Public-private partnership for housing development</td>
+                </tr>
+                <tr>
+                    <td>Beneficiary-Led Construction (BLC)</td>
+                    <td>Individual construction with government assistance</td>
+                </tr>
+                <tr>
+                    <td>In-Situ Slum Rehabilitation (ISSR)</td>
+                    <td>Rehabilitation of slum dwellers with free housing</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Eligibility Criteria</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Annual Income Limit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EWS (Economically Weaker Section)</td>
+                    <td>Up to ₹3 lakh</td>
+                </tr>
+                <tr>
+                    <td>LIG (Lower Income Group)</td>
+                    <td>₹3 lakh to ₹6 lakh</td>
+                </tr>
+                <tr>
+                    <td>MIG I (Middle Income Group)</td>
+                    <td>₹6 lakh to ₹12 lakh</td>
+                </tr>
+                <tr>
+                    <td>MIG II (Middle Income Group)</td>
+                    <td>₹12 lakh to ₹18 lakh</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Subsidy & Benefits</h2>
+        <div class="info-box">
+            <p><strong>Direct Benefit Transfer:</strong></p>
+            <ul>
+                <li><strong>EWS/LIG:</strong> Up to ₹2.67 lakh subsidy on home loans</li>
+                <li><strong>MIG I:</strong> Up to ₹2.33 lakh subsidy</li>
+                <li><strong>MIG II:</strong> Up to ₹2.30 lakh subsidy</li>
+                <li>Subsidy amount transferred directly to bank account</li>
+                <li>Reduces effective cost of housing</li>
+            </ul>
+        </div>
+
+        <h2>Application Process</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Process</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Register on official portal at pmaymis.gov.in</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fill application form with necessary details</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Submit required documents (ID, Income proof, etc.)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Application undergoes verification</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Approval and bank loan processing</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Subsidy disbursed directly to bank</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Housing Specifications</h2>
+        <ul class="benefits-list">
+            <li>Pucca house with basic amenities</li>
+            <li>Built with earthquake-resistant design</li>
+            <li>Access to clean water and sanitation</li>
+            <li>Electricity connection</li>
+            <li>Size varies based on approved norms</li>
+            <li>Environment-friendly construction</li>
+        </ul>
+
+        <h2>Success & Impact</h2>
+        <div class="info-box">
+            <ul>
+                <li>Over 2 crore (20 million) houses sanctioned</li>
+                <li>Over 1 crore (10 million) houses completed</li>
+                <li>Transformed housing sector in India</li>
+                <li>Generated employment in construction</li>
+                <li>Improved living conditions of poor families</li>
+            </ul>
+        </div>
+
+        <h2>Rural vs Urban Components</h2>
+        <p><strong>Urban PM Awas Yojana:</strong> Focuses on credit-linked subsidy and slum rehabilitation</p>
+        <p><strong>Rural PM Awas Yojana:</strong> Provides direct financial assistance for house construction</p>
+
+        <h2>Important Links</h2>
+        <div class="btn-group">
+            <a href="https://pmaymis.gov.in/" target="_blank" class="btn">🌐 Official Portal</a>
+            <a href="https://pmaymis.gov.in/search/" target="_blank" class="btn">🔍 Check Status</a>
+            <a href="https://pmaymis.gov.in/DesktopModule/HelpDownload/tabid/139/Default.aspx" target="_blank" class="btn">📋 Guidelines</a>
+            <a href="policy.html" class="btn btn-back">⬅️ Back to Policies</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 India Government Policies Project | Pradhan Mantri Awas Yojana Detail Page</p>
+    </footer>
+
+</body>
+</html>
